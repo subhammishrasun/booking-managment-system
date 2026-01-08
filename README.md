@@ -43,4 +43,9 @@ npm run dev
 
  <!-- Purpose -->
 
-This project focuses on clarity, fundamentals, and real-world CRUD flow, not advanced features or over-engineering.
+This project focuses on clarity, fundamentals, and real-world CRUD flow, not advanced features or over-engineering.                    
+
+
+
+
+I learned how to build a full-stack CRUD application, connect frontend and backend using REST APIs, validate data properly, and debug common issues like CORS and database errors.
