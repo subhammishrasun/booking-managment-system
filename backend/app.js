@@ -9,27 +9,22 @@ const app = express();
 const allowedOrigins =
   process.env.NODE_ENV === "production"
     ? [
-        "https://booking-managment-system-1.onrender.com/" // Render frontend URL
+        "https://booking-managment-system-1.onrender.com" // Render frontend URL
       ]
     : [
         "http://localhost:5174", // Vite
-        "http://localhost:3000"  // CRA (optional)
+        "http://localhost:5173"  // CRA (optional)
       ];
 
 app.use(
   cors({
-    origin: function (origin, callback) {
-      // allow requests with no origin (Postman, curl)
-      if (!origin) return callback(null, true);
-
-      if (allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("CORS not allowed"));
-      }
-    }
+    origin: "http://localhost:5174",
+    credentials: true, //  REQUIRED
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type"]
   })
 );
+
 
 app.use(express.json());
 
