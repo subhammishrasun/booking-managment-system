@@ -9,7 +9,7 @@ const app = express();
 const allowedOrigins =
   process.env.NODE_ENV === "production"
     ? [
-        "https://booking-managment-system-1.onrender.com" // Render frontend URL
+        "https://booking-managment-system-1.onrender.com/" // Render frontend URL
       ]
     : [
         "http://localhost:5174", // Vite
