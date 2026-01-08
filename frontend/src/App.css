@@ -1,0 +1,71 @@
+/* Add to your global or component CSS file */
+
+/* Custom date picker styling */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%236B7280" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+  cursor: pointer;
+  padding-left: 16px;
+}
+
+/* Form field focus effects */
+.form-field:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Error message animation */
+.text-red-600 {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Add these styles for animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.booking-card {
+  animation: fadeInUp 0.3s ease-out;
+  animation-fill-mode: both;
+}
+
+/* Stagger animation for list items */
+.booking-card:nth-child(1) { animation-delay: 0.1s; }
+.booking-card:nth-child(2) { animation-delay: 0.2s; }
+.booking-card:nth-child(3) { animation-delay: 0.3s; }
+.booking-card:nth-child(4) { animation-delay: 0.4s; }
+.booking-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Smooth button hover effects */
+.btn-scale {
+  transition: transform 0.2s ease;
+}
+
+.btn-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Smooth background transitions */
+.bg-transition {
+  transition: background-color 0.3s ease;
+}
